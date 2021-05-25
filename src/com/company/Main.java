@@ -10,8 +10,8 @@ public class Main {
         String traversal_string = "../";
         String traversal_string2 = "../";
         malicious_data = malicious_data.replace("../", "");
-        malicious_data = malicious_data.replace("./", "");
-        malicious_data = malicious_data.replace(traversal_string, "");
+        malicious_data = malicious_data.replaceFirst("./", "");
+        malicious_data = malicious_data.replaceAll(traversal_string, "");
         malicious_data = malicious_data.replace(traversal_string2, "");
 
         System.out.println(malicious_data);
